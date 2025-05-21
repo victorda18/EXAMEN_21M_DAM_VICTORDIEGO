@@ -8,7 +8,7 @@ public class ExamenPrimo {
 		
 		Scanner ent= new Scanner(System.in);
 		int num=0;
-		boolean primo=false;
+		boolean primo=true;
 		
 		System.out.println("Bueno dias Ceinmark, soy Víctor Diego.");
 		try {
@@ -17,6 +17,18 @@ public class ExamenPrimo {
 		}catch(NumberFormatException ex) {
 			System.out.println("Valor no esperado");
 		}
+		
+		for(int i=2;i<num;i++){
+            if(num%i==0){
+                primo=false;
+            }
+        }
+        if(primo==true){
+            System.out.println (num+" es primo");
+        }
+        else{
+            System.out.println (num+" no es primo");
+        }
 		
 		
 	}//fin main
